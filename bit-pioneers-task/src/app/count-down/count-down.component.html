@@ -1,0 +1,21 @@
+<div class="timer">
+    <input type="date" [ngModel] ="firstDate | date " (ngModelChange)="firstDate = $event" [value]="firstDate | date">
+    <br>
+    {{firstDate | date}}
+    <!--
+    <br>
+    <input type="date" [ngModel] ="firstMarker | date " (ngModelChange)="firstMarker = $event" [value]="firstMarker | date">
+    <br>
+    <br>
+    <input type="date" [ngModel] ="secondMarker | date " (ngModelChange)="secondMarker = $event" [value]="secondMarker | date">-->
+    <br>
+    <button (click)="startTimer()"> Choose the end date </button>
+</div>
+
+<div class="timer">
+    <h4> Count down timer </h4>
+    <span id="days"> {{daysToDday}} </span>Day(s)
+    <span id="hours"> {{hoursToDday}} </span>Hrs 
+    <span id="minutes"> {{minutesToDday}} </span>Min
+    <span id="seconds"> {{secondsToDday}} </span>S
+</div>
